@@ -1,0 +1,42 @@
+[
+  {
+    "id": "pallava",
+    "name": "Pallava",
+    "family": "brahmi-derived",
+    "region": "Tamil Nadu, Southeast Asia",
+    "period_start": "4th century CE",
+    "period_end": "9th century CE",
+    "description": "The Pallava script is a Brahmi-derived writing system developed under the Pallava dynasty of Kanchipuram (Tamil Nadu). It served as the official script of Pallava royal inscriptions and exerted a profound influence on the scripts of Southeast Asia — the Khmer, Javanese (Kawi), Mon, Burmese, and Thai writing systems all descend from Pallava prototypes. The script is attested in stone inscriptions, copper-plate grants, and temple pillar records from the 4th to 9th centuries CE. Its forms are intermediate between late Southern Brahmi and early Grantha.",
+    "status": "attested"
+  },
+  {
+    "id": "grantha",
+    "name": "Grantha",
+    "family": "brahmi-derived",
+    "region": "Tamil Nadu, Kerala",
+    "period_start": "6th century CE",
+    "period_end": "present (liturgical use)",
+    "description": "Grantha is a South Indian script that evolved from the Pallava script, used historically to write Sanskrit in the Tamil-speaking regions. It was the primary vehicle for Sanskrit literary and liturgical texts in Tamil Nadu and Kerala. Grantha letters were also borrowed into the Tamil script to represent Sanskrit sounds absent in Tamil phonology (ja, śa, ṣa, ha, kṣa, śrī). The script is encoded in Unicode at U+11300–U+1137F (Unicode 7.0, 2014). It remains in limited liturgical use today, particularly in Vedic recitation manuscripts.",
+    "status": "attested"
+  },
+  {
+    "id": "vatteluttu",
+    "name": "Vatteluttu",
+    "family": "tamil-brahmi-derived",
+    "region": "Tamil Nadu, Kerala",
+    "period_start": "5th century CE",
+    "period_end": "13th century CE",
+    "description": "Vatteluttu (வட்டெழுத்து, \"rounded script\") is a Tamil-region writing system characterised by its distinctively rounded letter forms, in contrast to the more angular Pallava-Grantha tradition. It developed from the Tamil-Brahmi script independently of the Pallava line and was the dominant script for Tamil-language inscriptions in the Pandya and Chera kingdoms. Vatteluttu inscriptions are found across Tamil Nadu and Kerala from the 5th to 13th centuries CE. The script declined as the modern Tamil script (derived from Grantha influence) became dominant.",
+    "status": "attested"
+  },
+  {
+    "id": "tamil-brahmi",
+    "name": "Tamil-Brahmi",
+    "family": "brahmi",
+    "region": "Tamil Nadu",
+    "period_start": "3rd century BCE",
+    "period_end": "3rd century CE",
+    "description": "Tamil-Brahmi is the earliest known writing system used to write the Tamil language, attested in cave inscriptions (eḻuttu) and potsherds from the 3rd century BCE onward. It is an adaptation of the pan-Indian Brahmi script with modifications to suit Tamil phonology — notably the addition of a puḷḷi (dot) diacritic to mark pure consonants without the inherent /a/ vowel. The corpus has been comprehensively studied by Iravatham Mahadevan (Early Tamil Epigraphy, 2003). Tamil-Brahmi evolved into the Vatteluttu and early Tamil scripts by the 4th–5th centuries CE.",
+    "status": "attested"
+  }
+]

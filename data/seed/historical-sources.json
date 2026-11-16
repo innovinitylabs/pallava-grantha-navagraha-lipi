@@ -1,0 +1,101 @@
+[
+  {
+    "id": "SRC-PANDEY-2018",
+    "title": "Preliminary Proposal to Encode Pallava in Unicode",
+    "author": "Anshuman Pandey",
+    "year": "2018",
+    "publisher": "Unicode Consortium",
+    "source_type": "proposal",
+    "url": "https://www.unicode.org/L2/L2018/18083-pallava.pdf",
+    "archive": "Unicode Consortium Document Registry",
+    "notes": "L2/18-083. Contains proposed character repertoire for Pallava script encoding, with code chart, character names, and representative glyphs based on epigraphic sources."
+  },
+  {
+    "id": "SRC-BUEHLER-1896",
+    "title": "Indische Palaeographie",
+    "author": "Georg Bühler",
+    "year": "1896",
+    "publisher": "K.J. Trübner, Strassburg",
+    "source_type": "publication",
+    "url": "",
+    "archive": "Various university libraries",
+    "notes": "Foundational reference for Indian script palaeography. English translation: Indian Palaeography (1904, Appendix to Indian Antiquary)."
+  },
+  {
+    "id": "SRC-BURNELL-1878",
+    "title": "Elements of South Indian Palaeography",
+    "author": "Arthur Coke Burnell",
+    "year": "1878",
+    "publisher": "Trübner & Co., London",
+    "source_type": "publication",
+    "url": "",
+    "archive": "Various university libraries; archive.org",
+    "notes": "Comprehensive study of South Indian script development including Pallava, Grantha, and Vatteluttu. Second enlarged edition, 1878."
+  },
+  {
+    "id": "SRC-EI",
+    "title": "Epigraphia Indica",
+    "author": "Archaeological Survey of India",
+    "year": "1892",
+    "publisher": "Archaeological Survey of India",
+    "source_type": "publication",
+    "url": "",
+    "archive": "Archaeological Survey of India",
+    "notes": "Multi-volume journal (1892–present). Essential primary source for inscriptional evidence of Pallava-era epigraphy across South India."
+  },
+  {
+    "id": "SRC-MAHADEVAN-2003",
+    "title": "Early Tamil Epigraphy",
+    "author": "Iravatham Mahadevan",
+    "year": "2003",
+    "publisher": "Cre-A, Chennai",
+    "source_type": "publication",
+    "url": "",
+    "archive": "",
+    "notes": "Comprehensive study of Tamil-Brahmi inscriptions with palaeographic charts. The standard reference for Tamil-Brahmi decipherment and classification."
+  },
+  {
+    "id": "SRC-GRANTHA-UNICODE",
+    "title": "The Unicode Standard — Grantha Block",
+    "author": "Unicode Consortium",
+    "year": "2014",
+    "publisher": "Unicode Consortium",
+    "source_type": "proposal",
+    "url": "https://www.unicode.org/charts/PDF/U11300.pdf",
+    "archive": "Unicode Consortium",
+    "notes": "Official Unicode code chart for Grantha (U+11300–U+1137F). Encoded in Unicode 7.0. Relevant for comparison with Pallava predecessor forms."
+  },
+  {
+    "id": "SRC-SIVARAMAMURTI-1952",
+    "title": "Indian Epigraphy and South Indian Scripts",
+    "author": "Calambur Sivaramamurti",
+    "year": "1952",
+    "publisher": "Government Museum, Chennai",
+    "source_type": "publication",
+    "url": "",
+    "archive": "Government Museum, Chennai",
+    "notes": "Detailed study of South Indian script forms with comparative palaeographic tables. Originally published as Bulletin of the Madras Government Museum."
+  },
+  {
+    "id": "SRC-SII",
+    "title": "South Indian Inscriptions",
+    "author": "Archaeological Survey of India",
+    "year": "1890",
+    "publisher": "Archaeological Survey of India",
+    "source_type": "publication",
+    "url": "",
+    "archive": "Archaeological Survey of India",
+    "notes": "Multi-volume series of published South Indian inscriptions, including Pallava-era records. Edited by E. Hultzsch, V. Venkayya, H. Krishna Sastri, and others."
+  },
+  {
+    "id": "SRC-UNICODE-ASTRO",
+    "title": "Unicode Miscellaneous Symbols (U+2600–U+26FF)",
+    "author": "Unicode Consortium",
+    "year": "1991",
+    "publisher": "Unicode Consortium",
+    "source_type": "proposal",
+    "url": "https://www.unicode.org/charts/PDF/U2600.pdf",
+    "archive": "Unicode Consortium",
+    "notes": "Contains existing Western astronomical/astrological symbols. Critical for overlap analysis with proposed Indian astronomical symbols."
+  }
+]
