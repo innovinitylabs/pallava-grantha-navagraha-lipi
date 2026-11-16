@@ -6,7 +6,7 @@ abstract: "An open-source Indian astronomical symbol system and historical scrip
 authors:
   - name: "Nava Graha Lipi Contributors"
 license: MIT
-repository-code: ""
+repository-code: "https://github.com/innovinitylabs/pallava-grantha-navagraha-lipi"
 keywords:
   - pallava
   - grantha

@@ -66,7 +66,7 @@ export default function SettingsPage() {
           <div className="space-y-2 text-xs text-[var(--color-text-secondary)]">
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between py-2 border-b border-[var(--color-border)] gap-1">
               <span className="text-[var(--color-text-muted)]">Repository Remote (Origin)</span>
-              <span className="font-mono text-[var(--color-accent-maroon)]">https://github.com/innovinitylabs/pallava-grantha.git</span>
+              <span className="font-mono text-[var(--color-accent-maroon)]">https://github.com/innovinitylabs/pallava-grantha-navagraha-lipi.git</span>
             </div>
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between py-2 border-b border-[var(--color-border)] gap-1">
               <span className="text-[var(--color-text-muted)]">Active Git Branch</span>

@@ -10,7 +10,7 @@ export function Header() {
       </div>
       <div className="flex items-center gap-3">
         <a
-          href="https://github.com/innovinitylabs/pallava-grantha"
+          href="https://github.com/innovinitylabs/pallava-grantha-navagraha-lipi"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-1.5 px-3 py-1 text-xs rounded border border-[var(--color-border)] bg-[var(--color-surface-card)] hover:bg-[var(--color-surface-hover)] text-[var(--color-text-secondary)] transition-colors shadow-2xs"
