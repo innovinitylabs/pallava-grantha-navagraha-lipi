@@ -1,169 +1,248 @@
 @import "tailwindcss";
 
-/* ------------------------------------------------------------------ */
-/* Nava Graha Lipi — Parchment & Stone Design System                  */
-/* ------------------------------------------------------------------ */
-
 :root {
-  /* Parchment and stone palette — Light mode */
-  --color-bg-primary: #FAF6F0;
-  --color-bg-secondary: #F0EBE3;
-  --color-bg-tertiary: #E8E2D8;
-  --color-text-primary: #2D2D2D;
-  --color-text-secondary: #5A5549;
-  --color-text-muted: #8B8578;
-  --color-accent-maroon: #5B1A18;
-  --color-accent-maroon-light: #7A2E2C;
-  --color-accent-bronze: #8B7355;
-  --color-accent-copper: #6B5B4E;
-  --color-border: #D4CFC7;
-  --color-border-strong: #B8B0A4;
-  --color-surface-card: #FFFFFF;
-  --color-surface-hover: #F5F0E8;
-  --color-surface-inset: #ECE7DD;
-  --color-success: #2D5A27;
-  --color-warning: #8B6914;
-  --color-error: #8B1A1A;
+  /* Archival Paper & Ink Palette (Anekaroopam Material Foundation) */
+  --paper: #f4f0e8;
+  --paper-deep: #ebe6dc;
+  --ink: #16120f;
+  --muted: #8a8478;
+  --border: rgba(26, 24, 20, 0.12);
+  --surface: rgba(248, 244, 236, 0.62);
+  --surface-elevated: #faf8f4;
+  --mount: #f3efe8;
+  --mount-edge: rgba(42, 38, 32, 0.09);
 
-  /* Sidebar */
-  --color-sidebar-bg: #2D2822;
-  --color-sidebar-text: #D4CFC7;
-  --color-sidebar-text-muted: #8B8578;
-  --color-sidebar-hover: #3A3530;
-  --color-sidebar-active: #5B1A18;
-  --color-sidebar-border: #3A3530;
+  /* Astronomical & Epigraphical Accents */
+  --cinnabar: #8c2d19;
+  --cinnabar-subtle: rgba(140, 45, 25, 0.08);
+  --bronze: #947846;
+  --bronze-subtle: rgba(148, 120, 70, 0.1);
+  --accent: #5c564c;
+
+  --background: var(--paper);
+  --foreground: var(--ink);
+
+  /* Archival Material Texture Densities */
+  --paper-fiber-opacity: 0.024;
+  --paper-scan-opacity: 0.058;
+  --paper-tone-opacity: 0.52;
+
+  --paper-material-mask:
+    radial-gradient(
+      ellipse 72% 58% at 50% 46%,
+      rgba(0, 0, 0, 0.42) 0%,
+      rgba(0, 0, 0, 0.78) 55%,
+      rgba(0, 0, 0, 1) 100%
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.95) 0%,
+      rgba(0, 0, 0, 0.55) 18%,
+      rgba(0, 0, 0, 0.5) 82%,
+      rgba(0, 0, 0, 0.92) 100%
+    );
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-bg-primary: #1A1814;
-    --color-bg-secondary: #252220;
-    --color-bg-tertiary: #302C28;
-    --color-text-primary: #E8E4DF;
-    --color-text-secondary: #B8B0A4;
-    --color-text-muted: #7A7368;
-    --color-accent-maroon: #D4534F;
-    --color-accent-maroon-light: #E06D69;
-    --color-accent-bronze: #C4A775;
-    --color-accent-copper: #A08A78;
-    --color-border: #3A3530;
-    --color-border-strong: #4A4540;
-    --color-surface-card: #1E1C18;
-    --color-surface-hover: #2A2722;
-    --color-surface-inset: #1A1814;
-    --color-success: #4A8A42;
-    --color-warning: #C49A30;
-    --color-error: #C44040;
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-source-serif);
+  --font-serif: var(--font-source-serif);
+  --font-display: var(--font-cormorant);
+}
 
-    --color-sidebar-bg: #141210;
-    --color-sidebar-text: #B8B0A4;
-    --color-sidebar-text-muted: #6A6358;
-    --color-sidebar-hover: #252220;
-    --color-sidebar-active: #D4534F;
-    --color-sidebar-border: #2A2722;
+.font-anek-tamil {
+  font-family: var(--font-anek-tamil), sans-serif;
+}
+
+.font-anek-tamil-thin {
+  font-family: var(--font-anek-tamil), sans-serif;
+  font-weight: 300;
+  font-variation-settings: "wght" 300;
+}
+
+.font-display {
+  font-family: var(--font-cormorant), Georgia, serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Archival paper material system — layered, museum rag */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(env(safe-area-inset-top, 0px) + 5.5rem);
+  min-height: 100%;
+  overflow-x: clip;
+  background-color: var(--paper);
+}
+
+html::before,
+html::after,
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Cloudy tonal pooling + diffuse conservation lighting */
+html::before {
+  opacity: var(--paper-tone-opacity);
+  background:
+    radial-gradient(
+      ellipse 140% 100% at 10% 6%,
+      rgba(255, 252, 246, 0.45) 0%,
+      transparent 56%
+    ),
+    radial-gradient(
+      ellipse 110% 85% at 92% 88%,
+      rgba(224, 216, 200, 0.28) 0%,
+      transparent 52%
+    ),
+    radial-gradient(
+      ellipse 85% 65% at 62% 38%,
+      rgba(238, 232, 220, 0.18) 0%,
+      transparent 68%
+    ),
+    radial-gradient(
+      ellipse 60% 45% at 28% 72%,
+      rgba(224, 216, 204, 0.07) 0%,
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse 50% 40% at 75% 25%,
+      rgba(245, 238, 228, 0.14) 0%,
+      transparent 65%
+    );
+}
+
+/* Hybrid procedural microtexture: noise + fine fiber */
+body::before {
+  opacity: var(--paper-scan-opacity);
+  mix-blend-mode: multiply;
+  background-image:
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.72' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23f)'/%3E%3C/svg%3E");
+  background-size: 500px 500px;
+  -webkit-mask-image: var(--paper-material-mask);
+  mask-image: var(--paper-material-mask);
+}
+
+html::after {
+  opacity: var(--paper-fiber-opacity);
+  mix-blend-mode: multiply;
+  background-image:
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='c'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.22' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23c)'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='m'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.47' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23m)'/%3E%3C/svg%3E");
+  background-size: 640px 640px, 880px 880px;
+  -webkit-mask-image: var(--paper-material-mask);
+  mask-image: var(--paper-material-mask);
+}
+
+body {
+  position: relative;
+  z-index: 1;
+  min-width: 0;
+  overflow-x: clip;
+  background: transparent;
+  color: var(--foreground);
+  font-family: var(--font-source-serif), Georgia, "Times New Roman", serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  text-shadow: 0 0.15px 0 rgba(26, 24, 20, 0.02);
+}
+
+::selection {
+  background: rgba(140, 45, 25, 0.18);
+  color: var(--ink);
+}
+
+.prose-anek {
+  max-width: 44rem;
+  line-height: 1.75;
+  font-size: 1.05rem;
+}
+
+@media (max-width: 640px) {
+  :root {
+    --paper-fiber-opacity: 0.018;
+    --paper-scan-opacity: 0.048;
+    --paper-tone-opacity: 0.48;
+  }
+
+  .prose-anek {
+    font-size: 1rem;
+    line-height: 1.82;
   }
 }
 
-/* Register custom theme values for Tailwind v4 */
-@theme inline {
-  --color-bg-primary: var(--color-bg-primary);
-  --color-bg-secondary: var(--color-bg-secondary);
-  --color-bg-tertiary: var(--color-bg-tertiary);
-  --color-text-primary: var(--color-text-primary);
-  --color-text-secondary: var(--color-text-secondary);
-  --color-text-muted: var(--color-text-muted);
-  --color-accent-maroon: var(--color-accent-maroon);
-  --color-accent-maroon-light: var(--color-accent-maroon-light);
-  --color-accent-bronze: var(--color-accent-bronze);
-  --color-accent-copper: var(--color-accent-copper);
-  --color-border: var(--color-border);
-  --color-border-strong: var(--color-border-strong);
-  --color-surface-card: var(--color-surface-card);
-  --color-surface-hover: var(--color-surface-hover);
-  --color-surface-inset: var(--color-surface-inset);
-  --color-success: var(--color-success);
-  --color-warning: var(--color-warning);
-  --color-error: var(--color-error);
-  --color-sidebar-bg: var(--color-sidebar-bg);
-  --color-sidebar-text: var(--color-sidebar-text);
-  --color-sidebar-text-muted: var(--color-sidebar-text-muted);
-  --color-sidebar-hover: var(--color-sidebar-hover);
-  --color-sidebar-active: var(--color-sidebar-active);
-  --color-sidebar-border: var(--color-sidebar-border);
-
-  --font-sans: system-ui, -apple-system, "Segoe UI", sans-serif;
-  --font-serif: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+.prose-anek p + p {
+  margin-top: 1.25rem;
 }
 
-/* ------------------------------------------------------------------ */
-/* Base styles                                                        */
-/* ------------------------------------------------------------------ */
-
-body {
-  background-color: var(--color-bg-primary);
-  color: var(--color-text-primary);
-  font-family: var(--font-sans);
-}
-
-/* Selection colours reflecting maroon accent */
-::selection {
-  background-color: var(--color-accent-maroon);
-  color: #FFFFFF;
-}
-
-/* Scrollbar styling (WebKit) */
-::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--color-bg-secondary);
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--color-border-strong);
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--color-accent-copper);
-}
-
-/* Focus outlines using maroon accent */
-*:focus-visible {
-  outline: 2px solid var(--color-accent-maroon);
-  outline-offset: 2px;
-}
-
-/* ------------------------------------------------------------------ */
-/* Utility classes                                                     */
-/* ------------------------------------------------------------------ */
-
-/* Decorative rule — a thin horizontal line with stone taper */
-.rule-stone {
-  border: none;
-  height: 1px;
-  background: linear-gradient(
-    to right,
-    transparent,
-    var(--color-border-strong),
-    transparent
-  );
-  margin: 1.5rem 0;
-}
-
-/* Subtle parchment texture overlay (optional) */
-.parchment-texture {
+/* Extra material depth in open negative space */
+.paper-depth {
   position: relative;
+  isolation: isolate;
 }
 
-.parchment-texture::before {
+.paper-depth::before {
   content: "";
   position: absolute;
-  inset: 0;
-  opacity: 0.03;
-  background-image: url("data:image/svg+xml,%3Csvg width='200' height='200' viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  inset: -12%;
+  z-index: 0;
   pointer-events: none;
-  border-radius: inherit;
+  opacity: 0.55;
+  mix-blend-mode: multiply;
+  background:
+    radial-gradient(
+      ellipse 90% 70% at 50% 30%,
+      rgba(232, 224, 210, 0.18) 0%,
+      transparent 62%
+    ),
+    radial-gradient(
+      ellipse 70% 55% at 20% 80%,
+      rgba(218, 212, 200, 0.1) 0%,
+      transparent 58%
+    );
+}
+
+.paper-depth > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Archival mounting surface for catalogued glyphs */
+.archive-mount {
+  background-color: var(--mount);
+  border: 1px solid var(--mount-edge);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 252, 245, 0.55),
+    inset 0 -1px 3px rgba(26, 24, 20, 0.05);
+  transition: background-color 0.4s ease, border-color 0.4s ease;
+}
+
+.group:hover .archive-mount {
+  background-color: #f0ebe2;
+  border-color: rgba(140, 45, 25, 0.2);
+}
+
+/* Precision vector grid styling */
+.glyph-grid-line {
+  stroke: rgba(26, 24, 20, 0.08);
+  stroke-dasharray: 4 4;
+}
+
+.glyph-baseline {
+  stroke: var(--cinnabar);
+  stroke-width: 1.5;
+  opacity: 0.65;
+}
+
+.glyph-metric-line {
+  stroke: var(--bronze);
+  stroke-dasharray: 3 3;
+  opacity: 0.55;
 }
