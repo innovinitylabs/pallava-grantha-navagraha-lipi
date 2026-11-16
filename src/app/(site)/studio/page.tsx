@@ -92,7 +92,7 @@ export default function StudioPage() {
                     {selectedGraha.name}
                   </h3>
                   <div className="text-xs text-[var(--muted)] font-serif mt-0.5">
-                    {selectedGraha.nameSanskrit} • {selectedGraha.nameTamil}
+                    {selectedGraha.nameIAST} • {selectedGraha.nameTamil}
                   </div>
                 </div>
                 <button

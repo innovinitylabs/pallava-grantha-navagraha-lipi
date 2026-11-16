@@ -34,10 +34,10 @@ export default function ExplorerPage() {
       if (search.trim()) {
         const q = search.toLowerCase().trim();
         const matchesName = g.name.toLowerCase().includes(q);
-        const matchesSanskrit = g.nameSanskrit.toLowerCase().includes(q);
+        const matchesIAST = g.nameIAST.toLowerCase().includes(q);
         const matchesTamil = g.nameTamil.toLowerCase().includes(q);
         const matchesBody = g.celestialBody.toLowerCase().includes(q);
-        if (!matchesName && !matchesSanskrit && !matchesTamil && !matchesBody) {
+        if (!matchesName && !matchesIAST && !matchesTamil && !matchesBody) {
           return false;
         }
       }
@@ -133,7 +133,7 @@ export default function ExplorerPage() {
                       {g.nameTamil}
                     </span>
                     <span className="text-xs text-[var(--muted)] font-serif hidden sm:inline">
-                      ({g.nameSanskrit})
+                      ({g.nameIAST})
                     </span>
                   </div>
 

@@ -1386,7 +1386,7 @@ export const pallavCharacters: Character[] = [
     id: 'PAL-P-001',
     script_id: 'pallava',
     character_name: 'PALLAVA DANDA',
-    transliteration: '।',
+    transliteration: '|',
     phonetic_value: '(phrase separator)',
     ipa: '',
     category: 'punctuation',
@@ -1397,8 +1397,7 @@ export const pallavCharacters: Character[] = [
     svg_path: null,
     notes:
       'Single vertical stroke used as a phrase or verse-half separator (daṇḍa). ' +
-      'Functionally equivalent to the Devanagari daṇḍa (U+0964) but with Pallava ' +
-      'glyph form.',
+      'Indic daṇḍa function rendered with Pallava stroke ductus.',
     sort_order: 59,
     created_at: SEED_TS,
     updated_at: SEED_TS,
@@ -1407,7 +1406,7 @@ export const pallavCharacters: Character[] = [
     id: 'PAL-P-002',
     script_id: 'pallava',
     character_name: 'PALLAVA DOUBLE DANDA',
-    transliteration: '॥',
+    transliteration: '||',
     phonetic_value: '(verse separator)',
     ipa: '',
     category: 'punctuation',
@@ -1488,7 +1487,7 @@ export const navagrahas: Graha[] = [
   {
     id: 'surya',
     name: 'Sūrya',
-    name_sanskrit: 'सूर्य',
+    name_sanskrit: 'Sūrya',
     name_tamil: 'சூரியன்',
     celestial_body: 'Sun',
     day: 'Ñāyiṟṟukkiḻamai (ஞாயிற்றுக்கிழமை, Sunday)',
@@ -1503,7 +1502,7 @@ export const navagrahas: Graha[] = [
   {
     id: 'chandra',
     name: 'Candra',
-    name_sanskrit: 'चन्द्र',
+    name_sanskrit: 'Candra',
     name_tamil: 'சந்திரன்',
     celestial_body: 'Moon',
     day: 'Tiṅkaḷkiḻamai (திங்கள்கிழமை, Monday)',
@@ -1517,7 +1516,7 @@ export const navagrahas: Graha[] = [
   {
     id: 'mangala',
     name: 'Maṅgala',
-    name_sanskrit: 'मङ्गल',
+    name_sanskrit: 'Maṅgala',
     name_tamil: 'செவ்வாய்',
     celestial_body: 'Mars',
     day: 'Cevvāykkiḻamai (செவ்வாய்க்கிழமை, Tuesday)',
@@ -1531,7 +1530,7 @@ export const navagrahas: Graha[] = [
   {
     id: 'budha',
     name: 'Budha',
-    name_sanskrit: 'बुध',
+    name_sanskrit: 'Budha',
     name_tamil: 'புதன்',
     celestial_body: 'Mercury',
     day: 'Putaṉkiḻamai (புதன்கிழமை, Wednesday)',
@@ -1545,7 +1544,7 @@ export const navagrahas: Graha[] = [
   {
     id: 'brihaspati',
     name: 'Bṛhaspati',
-    name_sanskrit: 'बृहस्पति',
+    name_sanskrit: 'Bṛhaspati',
     name_tamil: 'குரு',
     celestial_body: 'Jupiter',
     day: 'Viyāḻakkiḻamai (வியாழக்கிழமை, Thursday)',
@@ -1560,7 +1559,7 @@ export const navagrahas: Graha[] = [
   {
     id: 'shukra',
     name: 'Śukra',
-    name_sanskrit: 'शुक्र',
+    name_sanskrit: 'Śukra',
     name_tamil: 'சுக்கிரன்',
     celestial_body: 'Venus',
     day: 'Veḷḷikkiḻamai (வெள்ளிக்கிழமை, Friday)',
@@ -1574,7 +1573,7 @@ export const navagrahas: Graha[] = [
   {
     id: 'shani',
     name: 'Śani',
-    name_sanskrit: 'शनि',
+    name_sanskrit: 'Śani',
     name_tamil: 'சனி',
     celestial_body: 'Saturn',
     day: 'Caṉikkiḻamai (சனிக்கிழமை, Saturday)',
@@ -1589,7 +1588,7 @@ export const navagrahas: Graha[] = [
   {
     id: 'rahu',
     name: 'Rāhu',
-    name_sanskrit: 'राहु',
+    name_sanskrit: 'Rāhu',
     name_tamil: 'ராகு',
     celestial_body: 'Ascending lunar node',
     day: '(no dedicated weekday)',
@@ -1605,7 +1604,7 @@ export const navagrahas: Graha[] = [
   {
     id: 'ketu',
     name: 'Kētu',
-    name_sanskrit: 'केतु',
+    name_sanskrit: 'Ketu',
     name_tamil: 'கேது',
     celestial_body: 'Descending lunar node',
     day: '(no dedicated weekday)',

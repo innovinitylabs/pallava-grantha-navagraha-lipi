@@ -12,17 +12,17 @@ This is not a revival of a single ancient script. It is a principled effort to s
 
 The initial repertoire covers the nine celestial bodies of Indian astronomical tradition:
 
-| Sanskrit | Tamil | Celestial Body |
-|----------|-------|---------------|
-| Sūrya (सूर्य) | சூரியன் | Sun |
-| Chandra (चन्द्र) | சந்திரன் | Moon |
-| Maṅgala (मङ्गल) | செவ்வாய் | Mars |
-| Budha (बुध) | புதன் | Mercury |
-| Bṛhaspati (बृहस्पति) | குரு | Jupiter |
-| Śukra (शुक्र) | சுக்கிரன் | Venus |
-| Śani (शनि) | சனி | Saturn |
-| Rāhu (राहु) | இராகு | Ascending Node |
-| Ketu (केतु) | கேது | Descending Node |
+| Sanskrit (IAST) | Tamil | Celestial Body |
+|-----------------|-------|---------------|
+| Sūrya | சூரியன் | Sun |
+| Candra / Chandra | சந்திரன் | Moon |
+| Maṅgala | செவ்வாய் | Mars |
+| Budha | புதன் | Mercury |
+| Bṛhaspati | குரு | Jupiter |
+| Śukra | சுக்கிரன் | Venus |
+| Śani | சனி | Saturn |
+| Rāhu | இராகு | Ascending Node |
+| Ketu | கேது | Descending Node |
 
 ## Technology Stack
 

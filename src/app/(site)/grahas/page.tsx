@@ -61,7 +61,7 @@ export default function GrahasPage() {
                       {g.name}
                     </h3>
                     <div className="text-xs text-[var(--muted)] font-serif">
-                      {g.nameSanskrit} • {g.celestialBody}
+                      {g.nameIAST} • {g.celestialBody}
                     </div>
                     <div className="text-[11px] text-[var(--bronze)]">
                       {g.day} • {g.element}

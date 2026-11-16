@@ -30,7 +30,7 @@ export interface GrahaRecord {
   id: string;
   number: number;
   name: string;
-  nameSanskrit: string;
+  nameIAST: string;
   nameTamil: string;
   celestialBody: string;
   day: string;

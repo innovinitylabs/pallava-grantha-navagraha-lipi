@@ -53,7 +53,7 @@ export default async function GrahaDetailPage({ params }: GrahaDetailPageProps) 
           </h1>
 
           <div className="text-base text-[var(--muted)] font-serif">
-            {graha.nameSanskrit} • {graha.celestialBody} • {graha.day} • Direction: {graha.direction}
+            {graha.nameIAST} • {graha.celestialBody} • {graha.day} • Direction: {graha.direction}
           </div>
 
           <p className="text-sm sm:text-base text-[var(--ink)] leading-relaxed">

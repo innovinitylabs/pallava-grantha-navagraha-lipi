@@ -2,7 +2,7 @@
   {
     "id": "ASTRO-GRAHA-SURYA",
     "name": "Sūrya",
-    "name_sanskrit": "सूर्य",
+    "name_sanskrit": "Sūrya",
     "name_tamil": "சூரியன்",
     "category": "graha",
     "encoding_recommendation": "standalone-character",
@@ -15,7 +15,7 @@
   {
     "id": "ASTRO-GRAHA-CHANDRA",
     "name": "Candra",
-    "name_sanskrit": "चन्द्र",
+    "name_sanskrit": "Candra",
     "name_tamil": "சந்திரன்",
     "category": "graha",
     "encoding_recommendation": "standalone-character",
@@ -28,7 +28,7 @@
   {
     "id": "ASTRO-GRAHA-MANGALA",
     "name": "Maṅgala",
-    "name_sanskrit": "मङ्गल",
+    "name_sanskrit": "Maṅgala",
     "name_tamil": "செவ்வாய்",
     "category": "graha",
     "encoding_recommendation": "standalone-character",
@@ -41,7 +41,7 @@
   {
     "id": "ASTRO-GRAHA-BUDHA",
     "name": "Budha",
-    "name_sanskrit": "बुध",
+    "name_sanskrit": "Budha",
     "name_tamil": "புதன்",
     "category": "graha",
     "encoding_recommendation": "standalone-character",
@@ -54,7 +54,7 @@
   {
     "id": "ASTRO-GRAHA-BRIHASPATI",
     "name": "Bṛhaspati",
-    "name_sanskrit": "बृहस्पति",
+    "name_sanskrit": "Bṛhaspati",
     "name_tamil": "குரு",
     "category": "graha",
     "encoding_recommendation": "standalone-character",
@@ -67,7 +67,7 @@
   {
     "id": "ASTRO-GRAHA-SHUKRA",
     "name": "Śukra",
-    "name_sanskrit": "शुक्र",
+    "name_sanskrit": "Śukra",
     "name_tamil": "சுக்கிரன்",
     "category": "graha",
     "encoding_recommendation": "standalone-character",
@@ -80,7 +80,7 @@
   {
     "id": "ASTRO-GRAHA-SHANI",
     "name": "Śani",
-    "name_sanskrit": "शनि",
+    "name_sanskrit": "Śani",
     "name_tamil": "சனி",
     "category": "graha",
     "encoding_recommendation": "standalone-character",
@@ -93,7 +93,7 @@
   {
     "id": "ASTRO-GRAHA-RAHU",
     "name": "Rāhu",
-    "name_sanskrit": "राहु",
+    "name_sanskrit": "Rāhu",
     "name_tamil": "ராகு",
     "category": "graha",
     "encoding_recommendation": "standalone-character",
@@ -106,7 +106,7 @@
   {
     "id": "ASTRO-GRAHA-KETU",
     "name": "Kētu",
-    "name_sanskrit": "केतु",
+    "name_sanskrit": "Ketu",
     "name_tamil": "கேது",
     "category": "graha",
     "encoding_recommendation": "standalone-character",
