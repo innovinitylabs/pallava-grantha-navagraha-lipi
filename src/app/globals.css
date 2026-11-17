@@ -5,27 +5,30 @@
   --paper: #f4f0e8;
   --paper-deep: #ebe6dc;
   --ink: #16120f;
-  --muted: #8a8478;
-  --border: rgba(26, 24, 20, 0.12);
-  --surface: rgba(248, 244, 236, 0.62);
+  --muted: #7a7570;
+  --border: rgba(26, 24, 20, 0.11);
+  --surface: rgba(248, 244, 236, 0.60);
   --surface-elevated: #faf8f4;
-  --mount: #f3efe8;
-  --mount-edge: rgba(42, 38, 32, 0.09);
+  --mount: #f1ece4;
+  --mount-edge: rgba(42, 38, 32, 0.08);
 
   /* Astronomical & Epigraphical Accents */
   --cinnabar: #8c2d19;
-  --cinnabar-subtle: rgba(140, 45, 25, 0.08);
+  --cinnabar-subtle: rgba(140, 45, 25, 0.07);
   --bronze: #947846;
-  --bronze-subtle: rgba(148, 120, 70, 0.1);
+  --bronze-subtle: rgba(148, 120, 70, 0.09);
   --accent: #5c564c;
+
+  /* Header height token for consistent offsets */
+  --nav-h: 4rem;
 
   --background: var(--paper);
   --foreground: var(--ink);
 
   /* Archival Material Texture Densities */
   --paper-fiber-opacity: 0.024;
-  --paper-scan-opacity: 0.058;
-  --paper-tone-opacity: 0.52;
+  --paper-scan-opacity: 0.055;
+  --paper-tone-opacity: 0.50;
 
   --paper-material-mask:
     radial-gradient(
@@ -186,12 +189,13 @@ body {
 .paper-depth {
   position: relative;
   isolation: isolate;
+  overflow: hidden;
 }
 
 .paper-depth::before {
   content: "";
   position: absolute;
-  inset: -12%;
+  inset: 0;
   z-index: 0;
   pointer-events: none;
   opacity: 0.55;
@@ -245,4 +249,60 @@ body {
   stroke: var(--bronze);
   stroke-dasharray: 3 3;
   opacity: 0.55;
+}
+
+/* Nav wordmark lockup */
+.brand-wordmark {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+/* Section rule */
+.section-rule {
+  border-top: 1px solid var(--border);
+}
+
+/* Graha specimen card */
+.graha-cell {
+  border-right: 1px solid var(--border);
+}
+.graha-cell:last-child {
+  border-right: none;
+}
+
+/* Studio panel look */
+.studio-panel {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+/* Tabular mono numbers */
+.num-tabular {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+}
+
+/* Thin rule accent */
+.rule-cinnabar {
+  display: block;
+  width: 2rem;
+  height: 1.5px;
+  background: var(--cinnabar);
+  border-radius: 1px;
+}
+
+/* Research card */
+.research-card {
+  border: 1px solid var(--border);
+  background: var(--surface-elevated);
+  transition: border-color 0.3s ease;
+}
+.research-card:hover {
+  border-color: rgba(140, 45, 25, 0.25);
+}
+
+/* Smooth scroll for in-page anchors */
+html {
+  scroll-padding-top: calc(var(--nav-h, 4rem) + 1.5rem);
 }

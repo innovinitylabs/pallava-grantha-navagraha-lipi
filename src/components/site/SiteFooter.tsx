@@ -4,7 +4,7 @@ import { BRAND } from "@/lib/brand";
 
 export function SiteFooter() {
   return (
-    <footer className="paper-depth border-t border-[var(--border)] px-6 py-14 md:px-10 mt-20">
+    <footer className="border-t border-[var(--border)] px-6 py-14 md:px-10 bg-[var(--paper-deep)]">
       <div className="mx-auto flex max-w-7xl flex-col gap-10 md:flex-row md:items-end md:justify-between">
         <div className="space-y-4 max-w-md">
           <BrandLogo href="/" size="sm" showWordmark />
