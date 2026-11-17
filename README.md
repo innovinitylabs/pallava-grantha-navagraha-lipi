@@ -24,6 +24,20 @@ The initial repertoire covers the nine celestial bodies of Indian astronomical t
 | Rāhu | இராகு | Ascending Node |
 | Ketu | கேது | Descending Node |
 
+## Glyph Design Research Dossier (Fable Preparation)
+
+The project includes a comprehensive, structured research and design dossier prepared for visual development in **Fable**:
+
+- [00-project-brief.md](research/glyph-design-dossier/00-project-brief.md) — Project identity, purpose, scope, and architectural boundaries.
+- [01-historical-research.md](research/glyph-design-dossier/01-historical-research.md) — Indian Jyotisha notation traditions, Navagraha temple iconography, and Tamil-region epigraphy.
+- [02-visual-design-language.md](research/glyph-design-dossier/02-visual-design-language.md) — Visual vocabulary, stroke modulation, chisel serifs, and negative space rules.
+- [03-glyph-construction-system.md](research/glyph-design-dossier/03-glyph-construction-system.md) — Technical 1000 UPM grid, baseline ($y=700$), cap-height ($y=250$), and Bézier tangency standards.
+- [04-nine-graha-design-briefs.md](research/glyph-design-dossier/04-nine-graha-design-briefs.md) — Individual creative briefs for all nine Grahas across three design directions.
+- [05-design-evaluation-criteria.md](research/glyph-design-dossier/05-design-evaluation-criteria.md) — 10-dimension, 100-point quality assurance rubric and testing protocols.
+- [06-sources-and-provenance.md](research/glyph-design-dossier/06-sources-and-provenance.md) — Annotated academic bibliography (ASI, *Epigraphia Indica*, Pandey 2018 L2/18-083).
+- [glyph-specification.schema.json](research/glyph-design-dossier/glyph-specification.schema.json) — Machine-readable JSON Schema for candidate metadata.
+- [FABLE_HANDOFF.md](research/glyph-design-dossier/FABLE_HANDOFF.md) — Operational guidelines and creative constraints for designers in Fable.
+
 ## Technology Stack
 
 - **Framework:** Next.js 16 (App Router)

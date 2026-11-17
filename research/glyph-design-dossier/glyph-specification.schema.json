@@ -1,0 +1,264 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://nava-graha-lipi.valipokkann.in/schemas/glyph-specification.schema.json",
+  "title": "NavaGrahaLipiGlyphSpecification",
+  "description": "Machine-readable metadata schema for evaluating, cataloguing, and versioning candidate planetary glyphs for Nava Graha Lipi.",
+  "type": "object",
+  "required": [
+    "id",
+    "graha_id",
+    "version",
+    "names",
+    "design_direction",
+    "status",
+    "construction_parameters",
+    "svg_asset",
+    "epistemic_classification"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the glyph candidate (e.g., 'GLYPH-SURYA-DIR-A').",
+      "pattern": "^GLYPH-[A-Z]+-DIR-[A-C](-[0-9]+)?$"
+    },
+    "graha_id": {
+      "type": "string",
+      "description": "Identifier of the celestial body.",
+      "enum": [
+        "surya",
+        "candra",
+        "mangala",
+        "budha",
+        "guru",
+        "sukra",
+        "sani",
+        "rahu",
+        "ketu"
+      ]
+    },
+    "version": {
+      "type": "string",
+      "description": "Semantic version of this glyph iteration.",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "pua_codepoint": {
+      "type": "string",
+      "description": "Target Unicode Private Use Area (PUA) code point.",
+      "pattern": "^U\\+E00[0-8]$"
+    },
+    "names": {
+      "type": "object",
+      "required": ["iast", "english", "tamil"],
+      "properties": {
+        "iast": {
+          "type": "string",
+          "description": "Academic Latin IAST transliteration (e.g. 'Sūrya')."
+        },
+        "english": {
+          "type": "string",
+          "description": "Standard English planetary name (e.g. 'Sun')."
+        },
+        "tamil": {
+          "type": "string",
+          "description": "Modern Tamil script name (e.g. 'சூரியன்').",
+          "pattern": "^[\\u0B80-\\u0BFF\\s\\(\\)\\/]+$"
+        },
+        "tamil_archaic": {
+          "type": "string",
+          "description": "Classical Sangam or inscriptional Tamil name (e.g. 'ஞாயிறு')."
+        }
+      },
+      "additionalProperties": false
+    },
+    "design_direction": {
+      "type": "object",
+      "required": ["direction_type", "title", "rationale"],
+      "properties": {
+        "direction_type": {
+          "type": "string",
+          "enum": [
+            "conservative-pallava",
+            "geometric-yantra",
+            "modern-calligraphic"
+          ]
+        },
+        "title": {
+          "type": "string",
+          "description": "Descriptive title for this specific concept variant."
+        },
+        "rationale": {
+          "type": "string",
+          "description": "Detailed explanation of why this form communicates the Graha."
+        },
+        "historical_influences": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Documented epigraphic or archaeological influences cited in the design."
+        }
+      },
+      "additionalProperties": false
+    },
+    "construction_parameters": {
+      "type": "object",
+      "required": [
+        "viewbox",
+        "upm",
+        "baseline_y",
+        "cap_height_y",
+        "optical_center_x",
+        "optical_center_y",
+        "stroke_weight_primary",
+        "advance_width"
+      ],
+      "properties": {
+        "viewbox": {
+          "type": "string",
+          "const": "0 0 1000 1000"
+        },
+        "upm": {
+          "type": "integer",
+          "const": 1000
+        },
+        "baseline_y": {
+          "type": "number",
+          "default": 700
+        },
+        "cap_height_y": {
+          "type": "number",
+          "default": 250
+        },
+        "optical_center_x": {
+          "type": "number",
+          "default": 500
+        },
+        "optical_center_y": {
+          "type": "number",
+          "default": 475
+        },
+        "stroke_weight_primary": {
+          "type": "number",
+          "minimum": 30,
+          "maximum": 80,
+          "description": "Primary stem stroke width in units (nominally 48-60)."
+        },
+        "stroke_weight_secondary": {
+          "type": "number",
+          "minimum": 20,
+          "maximum": 50,
+          "description": "Secondary or crossbar stroke width in units (nominally 32-40)."
+        },
+        "advance_width": {
+          "type": "number",
+          "minimum": 700,
+          "maximum": 1200,
+          "default": 1000
+        },
+        "left_sidebearing": {
+          "type": "number",
+          "minimum": 40
+        },
+        "right_sidebearing": {
+          "type": "number",
+          "minimum": 40
+        },
+        "anchor_count": {
+          "type": "integer",
+          "description": "Total number of cubic Bézier anchor nodes in the master path."
+        },
+        "contour_count": {
+          "type": "integer",
+          "description": "Number of closed subpaths (1 for single silhouette, 2+ for inner counters)."
+        }
+      },
+      "additionalProperties": false
+    },
+    "svg_asset": {
+      "type": "object",
+      "required": ["file_path", "path_data", "fill_rule"],
+      "properties": {
+        "file_path": {
+          "type": "string",
+          "description": "Relative path to the standalone SVG vector file in repository."
+        },
+        "path_data": {
+          "type": "string",
+          "description": "The exact SVG path string (d attribute) containing closed cubic Bézier contours."
+        },
+        "fill_rule": {
+          "type": "string",
+          "enum": ["nonzero", "evenodd"],
+          "default": "nonzero"
+        }
+      },
+      "additionalProperties": false
+    },
+    "evaluation": {
+      "type": "object",
+      "properties": {
+        "total_score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "criteria_scores": {
+          "type": "object",
+          "properties": {
+            "individual_recognisability": { "type": "number", "minimum": 0, "maximum": 10 },
+            "family_coherence": { "type": "number", "minimum": 0, "maximum": 10 },
+            "small_scale_legibility": { "type": "number", "minimum": 0, "maximum": 10 },
+            "monochrome_reproduction": { "type": "number", "minimum": 0, "maximum": 10 },
+            "epigraphical_ductus": { "type": "number", "minimum": 0, "maximum": 10 },
+            "historical_integrity": { "type": "number", "minimum": 0, "maximum": 10 },
+            "cultural_resonance": { "type": "number", "minimum": 0, "maximum": 10 },
+            "western_distinguishability": { "type": "number", "minimum": 0, "maximum": 10 },
+            "geometric_consistency": { "type": "number", "minimum": 0, "maximum": 10 },
+            "font_suitability": { "type": "number", "minimum": 0, "maximum": 10 }
+          }
+        },
+        "evaluator_name": { "type": "string" },
+        "evaluation_date": { "type": "string", "format": "date" },
+        "review_comments": { "type": "string" }
+      }
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "draft-concept",
+        "under-fable-development",
+        "candidate-peer-review",
+        "approved-candidate",
+        "refinement-required",
+        "rejected-archived"
+      ],
+      "default": "draft-concept"
+    },
+    "epistemic_classification": {
+      "type": "string",
+      "enum": [
+        "HISTORICALLY ATTESTED",
+        "TRADITIONAL ASSOCIATION",
+        "SCHOLARLY INTERPRETATION",
+        "MODERN DESIGN INFERENCE",
+        "ORIGINAL PROJECT PROPOSAL"
+      ],
+      "default": "ORIGINAL PROJECT PROPOSAL"
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["source_id", "citation"],
+        "properties": {
+          "source_id": { "type": "string" },
+          "citation": { "type": "string" },
+          "relevant_claim": { "type": "string" }
+        }
+      }
+    },
+    "designer_notes": {
+      "type": "string",
+      "description": "Qualitative observations by the designer in Fable regarding optical adjustments or unresolved questions."
+    }
+  },
+  "additionalProperties": false
+}
